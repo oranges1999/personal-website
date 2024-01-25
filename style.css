@@ -1,0 +1,57 @@
+body, html{
+    height: 100%;
+}
+
+html{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; 
+}
+
+body{
+    background-color: rgba(0, 0, 0, .8) !important;
+}
+
+#loader{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s linear;
+    top: 0%;
+}
+
+.loader--hidden{
+    top: -100% !important;
+}
+
+
+#loader::after{
+    content:"";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: aqua;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
+
+.name{
+    font-size: clamp(75px, 10vw, 150px);
+
+}
+
+.slogan{
+    font-size: clamp(20px, 3vw, 50px);
+}
