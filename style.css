@@ -1,21 +1,14 @@
 body, html{
-    height: 100%;
+    height: 100% !important;
+    width: 100%;
+    font-family: "Poppins",sans-serif !important ;
 }
 
-html{
-    background-image: url(background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden; 
-}
-
-body{
-    background-color: rgba(0, 0, 0, .8) !important;
+#home{
+    background-color: rgba(0, 0, 0, .6) !important;
 }
 
 #loader{
-    position: absolute;
     height: 100%;
     width: 100%;
     background-color: black;
@@ -23,7 +16,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition:all 0.5s linear;
+    transition:all 0.5s ease-out;
     top: 0%;
 }
 
@@ -55,3 +48,67 @@ body{
 .slogan{
     font-size: clamp(20px, 3vw, 50px);
 }
+
+.insvisible-btn{
+    background: none;
+    border: none;
+}
+
+.tag{
+    background: black;
+    top: 0;
+    z-index: -2;
+    /* z-index: 1030 !important; */
+
+}
+
+.rotate{
+    transform: rotate(90deg);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.marquee-title div,.marquee-title-reverse div{
+    font-size: clamp(12px,5vw,50px);
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* transform: rotate(90deg); */
+}
+
+.marquee-title div{
+    animation: marquee 90s linear infinite;
+}
+
+@keyframes marquee {
+    from {transform: translateX(0%);}
+    to {transform: translateX(1500%);}
+}
+
+.marquee-title-reverse div{
+    animation: marquee-reverse 90s linear infinite;
+}
+
+@keyframes marquee-reverse {
+    from {transform: translateX(0%);}
+    to {transform: translateX(-1500%);}
+}
+
+.title, .mail{
+    color: #ff4a4a;
+}
+
+.show{
+    z-index: 1030 !important;
+}
+
+#bg-video{
+    z-index: -1 !important;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+
