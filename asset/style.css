@@ -153,6 +153,9 @@ body, html{
 
 .btn{
     right: 0px;
-
 }
 
+.link{
+    text-decoration: none;
+    color: #ff4a4a;
+}
