@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yuHuhN</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/d636cecebe.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <!-- Background -->
     <div>
         <video autoplay muted loop id="bg-video" class="position-absolute">
-            <source src="backgroundvideo.mp4" type="">
+            <source src="asset/background/backgroundvideo.mp4" type="">
         </video>
     </div>
 
@@ -39,7 +39,7 @@
                         <a class="nav-link" href="#"><button data-id="resume" class="tab-btn insvisible-btn text-light" type="button">Resume</button></a>
                     </li>
                     <li class="nav-item ms-auto">
-                        <a class="nav-link" href="#"><button data-id="Contact" class="tab-btn insvisible-btn text-light" type="button">Contact</button></a>
+                        <a class="nav-link" href="#"><button data-id="work" class="tab-btn insvisible-btn text-light" type="button">Work</button></a>
                     </li>
                     </ul>
                 </div>
@@ -81,11 +81,13 @@
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="text-light position-relative">
-                <div class="btn d-flex justify-content-end position-absolute">
-                    <button data-id="about" class="close-btn insvisible-btn" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                <div class="btn d-flex position-absolute p-0">
+                    <button data-id="about" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
                 </div>
-                <div class="title pb-3 fs-1 fw-bold text-center">About Me</div>
-                <div class="content px-3 py-4">
+                <div>
+                    <div class="title pb-3 fs-1 fw-bold text-start">About Me</div>
+                </div>
+                <div class="content row px-3 py-4 rounded-5">
                     <div>
                         <div class="fs-6">Who am I ?</div>
                         <div class="pb-4 fs-2 fw-bold">I'm yuHuhN, a Web Developer</div>
@@ -104,8 +106,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="pt-3 d-flex justify-content-center">
-                    <a href="/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-6 px-3 py-2" type="button">Download CV</button></a>
+                <div class="pt-3 d-flex justify-content-center rounded-pill">
+                    <a href="/asset/cv/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-6 px-3 py-2" type="button">Download CV</button></a>
                 </div>
             </div>
         </div>
@@ -151,14 +153,14 @@
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="text-light position-relative">
-                <div class="btn d-flex justify-content-end position-absolute">
-                    <button data-id="resume" class="close-btn insvisible-btn" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                <div class="btn d-flex position-absolute p-0">
+                    <button data-id="resume" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
                 </div>
                 <div>
                     <div>
-                        <div class="title text-center pb-3 fs-1 fw-bold">Resume</div>
+                        <div class="title text-start pb-3 fs-1 fw-bold">Resume</div>
                     </div>
-                    <div class="content row d-flex" style="overflow: scroll; max-height: 500px;">
+                    <div class="content row d-flex rounded-5" style="overflow: scroll; max-height: 500px;">
                         <div id="education" class="col-12 col-md-6">
                             <div class="fs-2 fw-bold text-center">Education</div>
                             <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
@@ -251,6 +253,99 @@
         </div>
     </section>
 
+    <!-- Work -->
+    <section id="work" class="tag position-absolute h-100 w-100">
+        <div class="fixed-top top">
+            <div class="marquee-title d-flex justify-content-end overflow-hidden">
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+            </div>
+        </div>
+        <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
+            <div class="text-light position-relative">
+                <div class="btn d-flex position-absolute p-0">
+                    <button data-id="work" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                </div>
+                <div>
+                    <div>
+                        <div class="title text-start pb-3 fs-1 fw-bold">Work</div>
+                    </div>
+                    <div>
+                        <div class="content row d-flex justify-content-center py-4 px-3 rounded-5" style="overflow: scroll; max-height: 500px;">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded-5">
+                                      <div class="carousel-item active">
+                                        <img src="asset/work/game-ecommerces/client-homepage.png" class="d-block w-100" alt="Client hompage">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="asset/work/game-ecommerces/product-page.png" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="asset/work/game-ecommerces/filter-and-live-search.png" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="asset/work/game-ecommerces/admin-homepage.png" class="d-block w-100" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="row d-flex">
+                                    <div class="col-sm-6 col-md-6 text-center">Demo: <a href="https://www.youtube.com/watch?v=TVH-H8SAa10">Link</a> (Video)</div>
+                                    <div class="col-sm-6 col-md-6 text-center">Github: <a href="https://github.com/oranges1999/GameEcommerce">Link</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="fixed-bottom bottom">
+            <div class="marquee-title-reverse d-flex justify-content-start overflow-hidden">
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+                <div>Work</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -260,6 +355,6 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script src="asset/script.js"></script>
 </body>
 </html>

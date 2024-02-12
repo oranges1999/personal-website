@@ -116,7 +116,6 @@ body, html{
 .download-cv{
     border: none;
     background-color: #ff4a4a;
-    border-radius: 20px;
 }
 
 .content-inside{
@@ -144,7 +143,6 @@ body, html{
 
 .content{
     background-color: #111111;
-    border-radius: 30px;
     overflow: scroll; 
     max-height: 550px;
 }
@@ -155,5 +153,6 @@ body, html{
 
 .btn{
     right: 0px;
+
 }
 
