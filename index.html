@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Loader -->
-    <!-- <div id="loader" class="position-absolute bg-dark"></div> -->
+    <div id="loader" class="position-absolute"></div>
 
     <!-- Background -->
     <div>
@@ -80,34 +80,32 @@
             </div>
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
-            <div class="text-light">
-                <div class="d-flex justify-content-end">
+            <div class="text-light position-relative">
+                <div class="btn d-flex justify-content-end position-absolute">
                     <button data-id="about" class="close-btn insvisible-btn" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
                 </div>
-                <div>
-                    <div>
-                        <div class="title pb-3 fs-1 fw-bold">About Me</div>
-                    </div>
+                <div class="title pb-3 fs-1 fw-bold text-center">About Me</div>
+                <div class="content px-3 py-4">
                     <div>
                         <div class="fs-6">Who am I ?</div>
                         <div class="pb-4 fs-2 fw-bold">I'm yuHuhN, a Web Developer</div>
                         <div class="fs-5">I am a fresher based in Viet Nam and I love to improve my skill by learning new things, new ways,...to solve a problem. </div>
                         <div class="fs-5">By having a resilient mind, I often see difficults as a challenge, and in that way my only job is to overcome it.</div>
                     </div>
-                </div>
-                <div class="w-100 border-bottom mb-4 pt-4"></div>
-                <div class="d-flex flex-wrap">
-                    <div class="col-12 col-md-6">
-                        <div class="fs-5">Name: Nhu Huy</div>
-                        <div class="fs-5">Age: 25</div>
+                    <div class="w-100 border-bottom mb-4 pt-4"></div>
+                    <div class="d-flex flex-wrap">
+                        <div class="col-12 col-md-6">
+                            <div class="fs-5">Name: Nhu Huy</div>
+                            <div class="fs-5">Age: 25</div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="fs-5">Email: <a class="mail text-decoration-none" href="mailto:nhuhuy1999@gmail.com">nhuhuy1999@gmail.com</a></div>
+                            <div class="fs-5">From: Ha Noi, Viet Nam</div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="fs-5">Email: <a class="mail text-decoration-none" href="mailto:nhuhuy1999@gmail.com">nhuhuy1999@gmail.com</a></div>
-                        <div class="fs-5">From: Ha Noi, Viet Nam</div>
-                    </div>
                 </div>
-                <div class="pt-3">
-                    <a href="/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-5 px-4 py-2" type="button">Download CV</button></a>
+                <div class="pt-3 d-flex justify-content-center">
+                    <a href="/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-6 px-3 py-2" type="button">Download CV</button></a>
                 </div>
             </div>
         </div>
@@ -132,7 +130,7 @@
     </section>
 
     <!-- Resume -->
-    <section id="resume" class="show tag position-absolute h-100 w-100">
+    <section id="resume" class="tag position-absolute h-100 w-100">
         <div class="fixed-top top">
             <div class="marquee-title d-flex justify-content-end overflow-hidden">
                 <div>Resume</div>
@@ -152,30 +150,83 @@
             </div>
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
-            <div class="text-light">
-                <div class="d-flex justify-content-end">
+            <div class="text-light position-relative">
+                <div class="btn d-flex justify-content-end position-absolute">
                     <button data-id="resume" class="close-btn insvisible-btn" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
                 </div>
                 <div>
                     <div>
-                        <div class="title pb-3 fs-1 fw-bold">Resume</div>
+                        <div class="title text-center pb-3 fs-1 fw-bold">Resume</div>
                     </div>
-                    <div>
-                        <div class="fs-6">Who am I ?</div>
-                        <div class="pb-4 fs-2 fw-bold">I'm yuHuhN, a Web Developer</div>
-                        <div class="fs-5">I am a fresher based in Viet Nam and I love to improve my skill by learning new things, new ways,...to solve a problem. </div>
-                        <div class="fs-5">By having a resilient mind, I often see difficults as a challenge, and in that way my only job is to overcome it.</div>
-                    </div>
-                </div>
-                <div class="w-100 border-bottom mb-4 pt-4"></div>
-                <div class="d-flex flex-wrap">
-                    <div class="col-12 col-md-6">
-                        <div class="fs-5">Name: Nhu Huy</div>
-                        <div class="fs-5">Age: 25</div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="fs-5">Email: <a class="mail text-decoration-none" href="mailto:nhuhuy1999@gmail.com">nhuhuy1999@gmail.com</a></div>
-                        <div class="fs-5">From: Ha Noi, Viet Nam</div>
+                    <div class="content row d-flex" style="overflow: scroll; max-height: 500px;">
+                        <div id="education" class="col-12 col-md-6">
+                            <div class="fs-2 fw-bold text-center">Education</div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Bachelor of Infomation Technologies</div>
+                                    <div class="row d-flex">
+                                        <div class="col-12 col-md-6">Hanoi Open University</div>
+                                        <div class="col-12 col-md-6">2021 - Present</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Bachelor of Finances and Banking</div>
+                                    <div class="row d-flex">
+                                        <div class="col-12 col-md-6">Banking Academy</div>
+                                        <div class="col-12 col-md-6">2017 - 2021</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="skils" class="col-12 col-md-6">
+                            <div class="fs-2 fw-bold text-center">Skills</div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Back-end</div>
+                                    <div class="row d-flex">
+                                        <div>PHP 8.3, Laravel 10, OOP, MVC, RESTful API</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Front-end</div>
+                                    <div class="row d-flex">
+                                        <div>HTML5, CSS3, Javascript, JQuery, Bootstrap, JSON, Fetch API, Responsive, AJAX</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Tools</div>
+                                    <div class="row d-flex">
+                                        <div>Windows, Github, Visual Studio Code, MySQL, SQL Server, Apache</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-3 position-relative border-start border-5" style="border-color: #ff4a4a !important;">
+                                <div class="pointer position-absolute d-flex">
+                                </div>
+                                <div class="content-inside ps-5">
+                                    <div class="fs-3">Others</div>
+                                    <div class="row d-flex">
+                                        <p>Agile, Scrum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

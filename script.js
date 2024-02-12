@@ -16,7 +16,7 @@ function toggleTab(id){
 
 
 $(document).ready(function(){
-    setTimeout(toggleLoader,2000);
+    setTimeout(toggleLoader,1500);
     var second = new Typed('#typed', {
         strings: ['Developer.', 'Sleeper.', 'Perfectionist.'],
         typeSpeed: 80,
@@ -30,14 +30,14 @@ $(document).ready(function(){
 $(".tab-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
-    setTimeout(function(){toggleTab(id)},1000)
-    setTimeout(toggleLoader,2000);
+    setTimeout(function(){toggleTab(id)},500)
+    setTimeout(toggleLoader,1000);
 })
 
 $(".close-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
-    setTimeout(function(){toggleTab(id)},1000)
-    setTimeout(toggleLoader,2000);
+    setTimeout(function(){toggleTab(id)},500)
+    setTimeout(toggleLoader,1000);
 })
 

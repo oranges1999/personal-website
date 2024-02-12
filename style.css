@@ -11,7 +11,7 @@ body, html{
 #loader{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #111111;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ body, html{
     width: 75px;
     height: 75px;
     border: 15px solid #dddddd;
-    border-top-color: aqua;
+    border-top-color: #ff4a4a;
     border-radius: 50%;
     animation: loading 1s ease infinite;
 }
@@ -118,3 +118,42 @@ body, html{
     background-color: #ff4a4a;
     border-radius: 20px;
 }
+
+.content-inside{
+    border-color: #ff4a4a !important;
+}
+
+.pointer{
+    top: 30px;
+}
+
+.pointer::before{
+    content:"";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4a4a;
+}
+
+.pointer::after{
+    display: block;
+    content: "";
+    border: solid 10px;
+    border-color: transparent transparent transparent #ff4a4a;
+}
+
+.content{
+    background-color: #111111;
+    border-radius: 30px;
+    overflow: scroll; 
+    max-height: 550px;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.btn{
+    right: 0px;
+}
+
