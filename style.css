@@ -72,27 +72,29 @@ body, html{
     font-size: clamp(12px,5vw,50px);
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
+    display: table;
+    table-layout: fixed;
     padding-left: 10px;
     padding-right: 10px;
     /* transform: rotate(90deg); */
 }
 
 .marquee-title div{
-    animation: marquee 90s linear infinite;
+    animation: marquee 6s linear infinite;
 }
 
 @keyframes marquee {
     from {transform: translateX(0%);}
-    to {transform: translateX(1500%);}
+    to {transform: translateX(100%);}
 }
 
 .marquee-title-reverse div{
-    animation: marquee-reverse 90s linear infinite;
+    animation: marquee-reverse 6s linear infinite;
 }
 
 @keyframes marquee-reverse {
     from {transform: translateX(0%);}
-    to {transform: translateX(-1500%);}
+    to {transform: translateX(-100%);}
 }
 
 .title, .mail{
@@ -111,4 +113,8 @@ body, html{
     min-height: 100%;
 }
 
-
+.download-cv{
+    border: none;
+    background-color: #ff4a4a;
+    border-radius: 20px;
+}

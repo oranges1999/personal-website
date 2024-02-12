@@ -18,7 +18,7 @@ function toggleTab(id){
 $(document).ready(function(){
     setTimeout(toggleLoader,2000);
     var second = new Typed('#typed', {
-        strings: ['Developer.', 'Perfectionist.'],
+        strings: ['Developer.', 'Sleeper.', 'Perfectionist.'],
         typeSpeed: 80,
         backSpeed: 40,
         smartBackspace: true,
