@@ -161,7 +161,7 @@ body, html{
 }
 
 .width-auto{
-    width: clamp(20px, 10vw, 60px);
+    width: clamp(50px, 10vw, 60px);
 }
 
 .name{
