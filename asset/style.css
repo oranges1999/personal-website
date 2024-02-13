@@ -144,7 +144,7 @@ body, html{
 .content{
     background-color: #111111;
     overflow: scroll; 
-    max-height: 550px;
+    /* height: 55%; */
 }
 
 .content::-webkit-scrollbar {
