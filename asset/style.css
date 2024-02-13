@@ -159,3 +159,11 @@ body, html{
     text-decoration: none;
     color: #ff4a4a;
 }
+
+.width-auto{
+    width: clamp(20px, 10vw, 60px);
+}
+
+.name{
+    color: #999999;
+}
