@@ -15,6 +15,7 @@ function toggleTab(id){
 }
 
 
+
 $(document).ready(function(){
     setTimeout(toggleLoader,1500);
     var second = new Typed('#typed', {
@@ -30,6 +31,8 @@ $(document).ready(function(){
 $(".tab-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
+    setTimeout(function(){$(".navbar").addClass("bg-black")},500)
+    setTimeout(function(){$(".tag").removeClass("show");},500);
     setTimeout(function(){toggleTab(id)},500)
     setTimeout(toggleLoader,1000);
 })
@@ -37,7 +40,18 @@ $(".tab-btn").on("click",function(){
 $(".close-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
+    setTimeout(function(){$(".navbar").removeClass("bg-black")},500)
     setTimeout(function(){toggleTab(id)},500)
     setTimeout(toggleLoader,1000);
-})
+});
+
+$(".close-nav-btn").on("click",function(){
+    if($(".navbar").hasClass("expand")){
+        $(".navbar").removeClass("expand")
+        $(".close-nav-btn").removeClass("rotate-180")
+    }else{
+        $(".navbar").addClass("expand")
+        $(".close-nav-btn").addClass("rotate-180")
+    }
+});
 

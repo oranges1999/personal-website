@@ -6,7 +6,6 @@
     <title>yuHuhN</title>
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/d636cecebe.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -17,55 +16,60 @@
 
     <!-- Background -->
     <div>
-        <video autoplay muted loop id="bg-video" class="position-absolute">
+        <video preload autoplay muted loop id="bg-video" class="position-absolute">
             <source src="asset/background/backgroundvideo.webm" type="">
         </video>
     </div>
 
     <!-- Header -->
     <header class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg d-flex flex-wrap py-3 mb-4">
-                <a class="fs-4 text-decoration-none text-light" href="#">yuHuhN</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-0 mb-lg-0 ">
-                    <li class="nav-item ms-auto">
-                        <a class="nav-link" href="#"><button data-id="about" class="tab-btn insvisible-btn text-light" type="button">About</button></a>
-                    </li>
-                    <li class="nav-item ms-auto">
-                        <a class="nav-link" href="#"><button data-id="resume" class="tab-btn insvisible-btn text-light" type="button">Resume</button></a>
-                    </li>
-                    <li class="nav-item ms-auto">
-                        <a class="nav-link" href="#"><button data-id="work" class="tab-btn insvisible-btn text-light" type="button">Work</button></a>
-                    </li>
-                    <li class="nav-item ms-auto">
-                        <a class="nav-link" href="#"><button data-id="contact" class="tab-btn insvisible-btn text-light" type="button">Contact</button></a>
-                    </li>
+        <div id="navbar" class="px-0 mx-0" >
+            <nav class="navbar navbar-expand-lg d-flex justify-content-center py-0" >
+                <div class="d-flex" id="">
+                    <ul class=" d-flex mb-0 mb-lg-0 p-0">
+                        <li class="nav-item ms-auto px-2">
+                            <a class="nav-link" href="#"><button data-id="about" class="tab-btn insvisible-btn text-light" type="button">About</button></a>
+                        </li>
+                        <li class="nav-item ms-auto px-2">
+                            <a class="nav-link" href="#"><button data-id="resume" class="tab-btn insvisible-btn text-light" type="button">Resume</button></a>
+                        </li>
+                        <li class="nav-item ms-auto px-2">
+                            <a class="nav-link" href="#"><button data-id="work" class="tab-btn insvisible-btn text-light" type="button">Work</button></a>
+                        </li>
+                        <li class="nav-item ms-auto px-2">
+                            <a class="nav-link" href="#"><button data-id="contact" class="tab-btn insvisible-btn text-light" type="button">Contact</button></a>
+                        </li>
                     </ul>
                 </div>
             </nav>
+            <div id="close-nav" class="d-flex justify-content-center">
+                <button class="insvisible-btn close-nav-btn" type="button"><i class="fa-solid fa-angle-down fa-bounce" style="color: #ffffff;"></i></button>
+            </div>
         </div>
     </header>
 
     <!-- Home -->
     <section id="home" class="h-100 d-flex justify-content-center align-items-center">
         <div>
+            <div class="fs-2 text-light text-center">
+                Hi, I am
+            </div>
             <div class="name text-light text-center">
                 yuHuhN
             </div>
+            <div class="fs-3 text-light text-center">
+                And
+            </div>
             <div class="slogan text-light text-center">
-                I am a <span id="typed"></span>
+                I'm a <span id="typed"></span>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="tag position-absolute h-100 w-100">
-        <div class="fixed-top top">
-            <div class="marquee-title d-flex justify-content-end overflow-hidden">
+    <section id="about" class="d-flex tag position-absolute h-100 w-100">
+        <div class="float-start position-relative">
+            <div class="position-absolute marquee-title d-flex flex-column overflow-hidden">
                 <div>About</div>
                 <div>About</div>
                 <div>About</div>
@@ -83,12 +87,9 @@
             </div>
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
-            <div class="text-light position-relative">
-                <div class="btn d-flex position-absolute p-0">
-                    <button data-id="about" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
-                </div>
+            <div class="text-light">
                 <div>
-                    <div class="title pb-3 fs-1 fw-bold text-start">About Me</div>
+                    <div class="title pb-3 fs-1 fw-bold text-center">About Me</div>
                 </div>
                 <div class="content px-3 py-4 rounded-5" style="overflow: scroll; max-height: 55vh;">
                     <div>
@@ -112,10 +113,13 @@
                 <div class="pt-3 d-flex justify-content-center">
                     <a href="/asset/cv/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-6 px-3 py-2 rounded-pill" type="button">Download CV</button></a>
                 </div>
+                <div class="d-flex justify-content-center py-5">
+                    <button data-id="about" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                </div>
             </div>
         </div>
-        <div class="fixed-bottom bottom">
-            <div class="marquee-title-reverse d-flex justify-content-start overflow-hidden">
+        <div class="float-end position-relative">
+            <div class="position-absolute marquee-title-reverse d-flex flex-column-reverse justify-content-end">
                 <div>About</div>
                 <div>About</div>
                 <div>About</div>
@@ -136,8 +140,8 @@
 
     <!-- Resume -->
     <section id="resume" class="tag position-absolute h-100 w-100">
-        <div class="fixed-top top">
-            <div class="marquee-title d-flex justify-content-end overflow-hidden">
+        <div class="float-start position-relative">
+            <div class="position-absolute marquee-title d-flex flex-column overflow-hidden">
                 <div>Resume</div>
                 <div>Resume</div>
                 <div>Resume</div>
@@ -156,12 +160,9 @@
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="text-light position-relative">
-                <div class="btn d-flex position-absolute p-0">
-                    <button data-id="resume" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
-                </div>
                 <div>
                     <div>
-                        <div class="title text-start pb-3 fs-1 fw-bold">Resume</div>
+                        <div class="title text-center pb-3 fs-1 fw-bold">Resume</div>
                     </div>
                     <div class="content row d-flex rounded-5" style="overflow: scroll; max-height: 55vh;">
                         <div id="education" class="col-12 col-md-6">
@@ -197,7 +198,7 @@
                                 <div class="content-inside ps-5">
                                     <div class="fs-3">Back-end</div>
                                     <div class="row d-flex">
-                                        <div>PHP 8.3, Laravel 10, OOP, MVC, RESTful API</div>
+                                        <div>PHP 8.3, Laravel 10, RESTful API</div>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +218,7 @@
                                 <div class="content-inside ps-5">
                                     <div class="fs-3">Tools</div>
                                     <div class="row d-flex">
-                                        <div>Windows, Github, Visual Studio Code, MySQL, SQL Server, Apache</div>
+                                        <div>Github, Visual Studio Code, MySQL, SQL Server, Apache</div>
                                     </div>
                                 </div>
                             </div>
@@ -233,11 +234,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center py-5">
+                        <button data-id="resume" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="fixed-bottom bottom">
-            <div class="marquee-title-reverse d-flex justify-content-start overflow-hidden">
+        <div class="float-end position-relative">
+            <div class="position-absolute marquee-title-reverse d-flex flex-column-reverse justify-content-end">
                 <div>Resume</div>
                 <div>Resume</div>
                 <div>Resume</div>
@@ -257,9 +261,9 @@
     </section>
 
     <!-- Work -->
-    <section id="work" class="tag position-absolute h-100 w-100">
-        <div class="fixed-top top">
-            <div class="marquee-title d-flex justify-content-end overflow-hidden">
+    <section id="work" class="d-flex tag position-absolute h-100 w-100">
+        <div class="float-start position-relative">
+            <div class="position-absolute marquee-title d-flex flex-column overflow-hidden">
                 <div>Work</div>
                 <div>Work</div>
                 <div>Work</div>
@@ -278,65 +282,21 @@
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="text-light position-relative">
-                <div class="btn d-flex position-absolute p-0">
-                    <button data-id="work" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                <div>
+                    <div class="title pb-3 fs-1 fw-bold text-center">Work</div>
                 </div>
                 <div>
-                    <div>
-                        <div class="title text-start pb-3 fs-1 fw-bold">Work</div>
-                    </div>
-                    <div>
-                        <div class="content d-flex justify-content-center py-4 px-3 rounded-5" style="overflow: scroll; max-height: 55vh;">
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                    </div>
-                                    <div class="carousel-inner rounded-5">
-                                      <div class="carousel-item active">
-                                        <img src="asset/work/game-ecommerces/client-homepage.png" class="d-block w-100" alt="Client hompage">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="asset/work/game-ecommerces/product-page.png" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="asset/work/game-ecommerces/filter-and-live-search.png" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="asset/work/game-ecommerces/admin-login.png" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="asset/work/game-ecommerces/admin-homepage.png" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                <div class="row d-flex">
-                                    <div class="col-sm-6 col-md-6 text-center fs-5">Demo: <a class="link" href="https://www.youtube.com/watch?v=TVH-H8SAa10" target="_blank">Link</a> (Video)</div>
-                                    <div class="col-sm-6 col-md-6 text-center fs-5">Github: <a class="link" href="https://github.com/oranges1999/GameEcommerce" target="_blank">Link</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center fs-4">
-                        There's more coming soon...
+                    <div class="content rounded-5 d-flex px-4 py-4" style="overflow: scroll; max-height: 55vh;">
+                        <div>Section is under development :(</div>
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center py-5">
+                <button data-id="work" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+            </div>
         </div>
-        <div class="fixed-bottom bottom">
-            <div class="marquee-title-reverse d-flex justify-content-start overflow-hidden">
+        <div class="float-end position-relative">
+            <div class="position-absolute marquee-title-reverse d-flex flex-column-reverse justify-content-end">
                 <div>Work</div>
                 <div>Work</div>
                 <div>Work</div>
@@ -357,8 +317,8 @@
 
     <!-- Contact -->
     <section id="contact" class="tag position-absolute h-100 w-100">
-        <div class="fixed-top top">
-            <div class="marquee-title d-flex justify-content-end overflow-hidden">
+        <div class="float-start position-relative">
+            <div class="position-absolute marquee-title d-flex flex-column overflow-hidden">
                 <div>Contact</div>
                 <div>Contact</div>
                 <div>Contact</div>
@@ -377,12 +337,9 @@
         </div>
         <div class="px-5 w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="text-light position-relative">
-                <div class="btn d-flex position-absolute p-0">
-                    <button data-id="contact" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
-                </div>
                 <div>
                     <div>
-                        <div class="title text-start pb-3 fs-1 fw-bold">Get in touch</div>
+                        <div class="title text-center pb-3 fs-1 fw-bold">Get in touch</div>
                     </div>
                     <div>
                         <div class="content py-4 px-3 rounded-5" style="overflow: scroll; max-height: 55vh;">
@@ -418,16 +375,19 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center py-3">
-                            <div class="px-3"><a target="_blank" href="https://www.linkedin.com/in/như-huy-aba49b1aa/"><i class="fs-3 fa-brands fa-linkedin" style="color: #ffffff;"></i></a></div>
+                            <div class="px-3"><a target="_blank" href="https://www.linkedin.com/in/như-huy-nguyễn-aba49b1aa/"><i class="fs-3 fa-brands fa-linkedin" style="color: #ffffff;"></i></a></div>
                             <div class="px-3"><a target="_blank" href="https://github.com/oranges1999"><i class="fs-3 fa-brands fa-square-github" style="color: #ffffff;"></i></a></div>
-                            <div class="px-3"><a target="_blank" href="https://www.facebook.com/camcam3299"><i class="fs-3 fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></div>
+                            <div class="px-3"><a target="_blank" href="https://fb.com/camcam3299"><i class="fs-3 fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></div>
                         </div>
                     </div>
                 </div>
+                <div class="d-flex justify-content-center py-5">
+                    <button data-id="contact" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                </div>
             </div>
         </div>
-        <div class="fixed-bottom bottom">
-            <div class="marquee-title-reverse d-flex justify-content-start overflow-hidden">
+        <div class="float-end position-relative">
+            <div class="position-absolute marquee-title-reverse d-flex flex-column-reverse justify-content-end">
                 <div>Contact</div>
                 <div>Contact</div>
                 <div>Contact</div>
@@ -447,6 +407,7 @@
     </section>
 
     <!-- Script -->
+    <script src="https://kit.fontawesome.com/d636cecebe.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

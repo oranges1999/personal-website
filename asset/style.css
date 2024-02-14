@@ -2,6 +2,7 @@ body, html{
     height: 100% !important;
     width: 100%;
     font-family: "Poppins",sans-serif !important ;
+    /* overflow: hidden; */
 }
 
 #home{
@@ -69,32 +70,42 @@ body, html{
 }
 
 .marquee-title div,.marquee-title-reverse div{
-    font-size: clamp(12px,5vw,50px);
+    font-size: clamp(12px,5vw,30px);
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
-    display: table;
-    table-layout: fixed;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     /* transform: rotate(90deg); */
 }
 
+.marquee-title{
+    transform: rotateX(180deg) scaleX(-1);
+}
+
 .marquee-title div{
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
     animation: marquee 6s linear infinite;
 }
 
 @keyframes marquee {
-    from {transform: translateX(0%);}
-    to {transform: translateX(100%);}
+    from {transform: translateY(0%);}
+    to {transform: translateY(100%);}
+}
+
+.marquee-title-reverse{
+    bottom: 0px;
+    right: 0px;
 }
 
 .marquee-title-reverse div{
-    animation: marquee-reverse 6s linear infinite;
+    writing-mode: vertical-lr;
+    animation: marquee 6s linear infinite;
 }
 
 @keyframes marquee-reverse {
-    from {transform: translateX(0%);}
-    to {transform: translateX(-100%);}
+    from {transform: translateY(0%);}
+    to {transform: translateY(-100%);}
 }
 
 .title, .mail{
@@ -102,7 +113,7 @@ body, html{
 }
 
 .show{
-    z-index: 1030 !important;
+    z-index: 1029 !important;
 }
 
 #bg-video{
@@ -143,16 +154,11 @@ body, html{
 
 .content{
     background-color: #111111;
-    overflow: scroll; 
     /* height: 55%; */
 }
 
 .content::-webkit-scrollbar {
     display: none;
-}
-
-.btn{
-    right: 0px;
 }
 
 .link{
@@ -164,6 +170,24 @@ body, html{
     width: clamp(50px, 10vw, 60px);
 }
 
+ul{
+    list-style: none !important;
+}
+
 .name{
     color: #999999;
 }
+
+.navbar{
+    height: 0px;
+    overflow: hidden;
+}
+
+.expand{
+    height: 50px;
+}
+
+.rotate-180{
+    transform: rotateX(180deg);
+}
+
