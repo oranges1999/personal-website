@@ -191,3 +191,8 @@ ul{
     transform: rotateX(180deg);
 }
 
+.close-nav-btn{
+    height: 50px;
+    width: 50px;
+}
+
