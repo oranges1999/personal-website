@@ -14,9 +14,27 @@ function toggleTab(id){
     }
 }
 
+function openNav(){
+    $(".navbar").addClass("expand")
+    $(".close-nav-btn").addClass("rotate-180")
+}
 
+function closeNav(){
+    $(".navbar").removeClass("expand")
+    $(".close-nav-btn").removeClass("rotate-180")
+}
+
+function toggleNav(){
+    if($(".navbar").hasClass("expand")){
+        closeNav();
+    }else{
+        openNav();
+    }
+}
 
 $(document).ready(function(){
+    openNav();
+    $("#close-nav").addClass("d-none");
     setTimeout(toggleLoader,1500);
     var second = new Typed('#typed', {
         strings: ['Gamer.', 'Sleeper.', 'Developer.', 'Perfectionist.'],
@@ -31,7 +49,9 @@ $(document).ready(function(){
 $(".tab-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
-    setTimeout(function(){$(".navbar").addClass("bg-black")},500)
+    setTimeout(function(){$("#close-nav").removeClass("d-none")},500)
+    setTimeout(closeNav,500)
+    setTimeout(function(){$("#navbar").addClass("bg-black")},500)
     setTimeout(function(){$(".tag").removeClass("show");},500);
     setTimeout(function(){toggleTab(id)},500)
     setTimeout(toggleLoader,1000);
@@ -40,18 +60,14 @@ $(".tab-btn").on("click",function(){
 $(".close-btn").on("click",function(){
     toggleLoader();
     var id = $(this).data("id");
-    setTimeout(function(){$(".navbar").removeClass("bg-black")},500)
+    setTimeout(function(){$("#close-nav").addClass("d-none")},500)
+    setTimeout(openNav,500);
+    setTimeout(function(){$("#navbar").removeClass("bg-black")},500)
     setTimeout(function(){toggleTab(id)},500)
     setTimeout(toggleLoader,1000);
 });
 
 $(".close-nav-btn").on("click",function(){
-    if($(".navbar").hasClass("expand")){
-        $(".navbar").removeClass("expand")
-        $(".close-nav-btn").removeClass("rotate-180")
-    }else{
-        $(".navbar").addClass("expand")
-        $(".close-nav-btn").addClass("rotate-180")
-    }
+    toggleNav();
 });
 
