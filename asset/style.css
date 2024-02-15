@@ -2,7 +2,7 @@ body, html{
     height: 100% !important;
     width: 100%;
     font-family: "Poppins",sans-serif !important ;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #home{
@@ -196,3 +196,8 @@ ul{
     width: 50px;
 }
 
+#btn-section{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+}
