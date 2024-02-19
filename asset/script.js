@@ -24,6 +24,10 @@ function closeNav(){
     $(".close-nav-btn").removeClass("rotate-180")
 }
 
+function removeBounce(){
+    $(".fa-angle-down").removeClass("fa-bounce");
+}
+
 function toggleNav(){
     if($(".navbar").hasClass("expand")){
         closeNav();
@@ -69,5 +73,6 @@ $(".close-btn").on("click",function(){
 
 $(".close-nav-btn").on("click",function(){
     toggleNav();
+    removeBounce();
 });
 

@@ -183,6 +183,7 @@ ul{
 .navbar{
     height: 0px;
     overflow: hidden;
+    transition: linear 0.1s;
 }
 
 .expand{
@@ -190,12 +191,13 @@ ul{
 }
 
 .rotate-180{
-    transform: rotateX(180deg);
+    transform: rotateZ(180deg);
 }
 
 .close-nav-btn{
     height: 30px;
     width: 50px;
+    transition: linear 0.1s;
 }
 
 #btn-section{
