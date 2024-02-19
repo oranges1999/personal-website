@@ -125,6 +125,8 @@ body, html{
 }
 
 .download-cv{
+    height: 40px;
+    width: 40px;
     border: none;
     background-color: #ff4a4a;
 }
@@ -200,4 +202,11 @@ ul{
     left: 50%;
     transform: translateX(-50%);
     bottom: 7%;
+}
+
+.dash{
+    height: 4px;
+    width: 50px;
+    background-color: #999999;
+    border-radius: 2px;
 }

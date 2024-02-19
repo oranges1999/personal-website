@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Loader -->
-    <div id="loader" class="position-absolute"></div>
+    <!-- <div id="loader" class="position-absolute"></div> -->
 
     <!-- Background -->
     <div>
@@ -67,7 +67,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="d-flex tag position-absolute h-100 w-100">
+    <section id="about" class="show d-flex tag position-absolute h-100 w-100">
         <div class="float-start position-relative">
             <div class="position-absolute marquee-title d-flex flex-column overflow-hidden">
                 <div>About</div>
@@ -110,8 +110,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="pt-3 d-flex justify-content-center">
-                    <a href="/asset/cv/Nguyen-Nhu-Huy-PHP-Developer.pdf" download><button class="download-cv text-light fs-6 px-3 py-2 rounded-pill" type="button">Download CV</button></a>
+                <div class="pt-3 d-flex flex-column align-items-center">
+                    <div class="fs-5">
+                        Download my CV
+                    </div>
+                    <div class="dash"></div>
+                    <div class="d-flex pt-2">
+                        <div class="px-1">
+                            <a href="/asset/cv/NGUYEN_NHU_HUY-PHP-INTERN-VN.pdf" download><button class="download-cv text-light fs-6 rounded-pill" type="button">VN</button></a>
+                        </div>
+                        <div class="px-1">
+                            <a href="/asset/cv/NGUYEN_NHU_HUY-PHP-INTERN-EN.pdf" download><button class="download-cv text-light fs-6 rounded-pill" type="button">EN</button></a>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div id="btn-section" class="position-absolute">
                     <button data-id="about" class="close-btn insvisible-btn p-0" type="button"><i class="fs-1 fa-solid fa-xmark" style="color: #ffffff;"></i></button>
