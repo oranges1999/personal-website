@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div>
-
+    <div class="text-white">
+        dasdsa
     </div>
 </template>
 
